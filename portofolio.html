@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Portofolio PKL - Syifa Maylani</title>
   <style>
-    /* ==== RESET ==== */
+    /* ==== RESET & GLOBAL ==== */
     * {
       margin: 0;
       padding: 0;
@@ -17,17 +17,18 @@
       background: #f5f7fa;
       color: #333;
       line-height: 1.6;
+      scroll-behavior: smooth;
     }
 
     header {
       background: linear-gradient(135deg, #5d5fef, #7a77ff);
       color: white;
-      padding: 2rem 1rem;
+      padding: 2.5rem 1rem;
       text-align: center;
     }
 
     header h1 {
-      font-size: 2.2rem;
+      font-size: 2.4rem;
       margin-bottom: 0.3rem;
     }
 
@@ -36,6 +37,7 @@
       opacity: 0.9;
     }
 
+    /* ==== NAVIGATION ==== */
     nav {
       background: #333;
       color: white;
@@ -51,12 +53,14 @@
       text-decoration: none;
       margin: 0 15px;
       font-weight: 500;
+      transition: color 0.3s;
     }
 
     nav a:hover {
       color: #7a77ff;
     }
 
+    /* ==== SECTION STYLES ==== */
     section {
       padding: 3rem 10%;
     }
@@ -68,35 +72,56 @@
       display: inline-block;
     }
 
-    .profile, .education, .organization, .portfolio {
+    .profile,
+    .education,
+    .experience,
+    .portfolio {
       background: white;
       border-radius: 15px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
       padding: 2rem;
       margin-bottom: 2rem;
     }
 
+    /* ==== PROFILE ==== */
+    .profile {
+      text-align: center;
+    }
+
     .profile img {
-      width: 120px;
-      height: 120px;
+      width: 130px;
+      height: 130px;
       border-radius: 50%;
       object-fit: cover;
       margin-bottom: 1rem;
-      border: 3px solid #7a77ff;
+      border: 4px solid #7a77ff;
     }
 
     .profile h3 {
       margin-bottom: 0.5rem;
+      color: #333;
     }
 
-    .education ul, .organization ul {
+    .profile p {
+      max-width: 600px;
+      margin: 0 auto;
+      color: #555;
+    }
+
+    /* ==== EDUCATION & EXPERIENCE ==== */
+    ul {
       list-style: none;
     }
 
-    .education li, .organization li {
+    li {
       margin-bottom: 0.8rem;
     }
 
+    strong {
+      color: #5d5fef;
+    }
+
+    /* ==== PORTFOLIO ==== */
     .portfolio-cards {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -106,13 +131,14 @@
     .card {
       background: #fff;
       border-radius: 12px;
-      box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
       overflow: hidden;
-      transition: transform 0.3s ease;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
     .card:hover {
       transform: translateY(-5px);
+      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
     }
 
     .card img {
@@ -128,25 +154,31 @@
     .card-content h3 {
       margin-bottom: 0.5rem;
       color: #5d5fef;
+      font-size: 1.1rem;
     }
 
+    /* ==== FOOTER ==== */
     footer {
       text-align: center;
       padding: 2rem;
       background: #333;
       color: white;
+      font-size: 0.9rem;
     }
 
-    /* Responsif */
-    @media(max-width: 768px) {
+    /* ==== RESPONSIVE ==== */
+    @media (max-width: 768px) {
       section {
         padding: 2rem 5%;
+      }
+
+      header h1 {
+        font-size: 1.8rem;
       }
     }
   </style>
 </head>
 <body>
-
   <header>
     <h1>Portofolio PKL - Syifa Maylani</h1>
     <p>Rekayasa Perangkat Lunak | SMK Informatika Utama</p>
@@ -155,80 +187,46 @@
   <nav>
     <a href="#profil">Profil</a>
     <a href="#pendidikan">Pendidikan</a>
-    <a href="#organisasi">Pengalaman</a>
+    <a href="#pengalaman">Pengalaman</a>
     <a href="#portofolio">Portofolio</a>
   </nav>
 
   <section id="profil" class="profile">
-    <center>
-      <img src="https://via.placeholder.com/120" alt="Foto Profil">
-      <h3>Marsya Ardeliansyah</h3>
-      <p>Saya adalah siswi SMK Informatika jurusan Rekayasa Perangkat Lunak (RPL). 
-         Saya memiliki ketertarikan dalam pengembangan web dan ingin mengembangkan kemampuan saya melalui kegiatan Praktik Kerja Lapangan (PKL).</p>
-    </center>
+    <img src="https://via.placeholder.com/130" alt="Foto Profil Syifa Maylani" />
+    <h3>Syifa Maylani</h3>
+    <p>
+      Saya adalah siswi SMK Informatika Utama jurusan Rekayasa Perangkat Lunak (RPL). 
+      Saya memiliki ketertarikan dalam pengembangan web dan desain antarmuka. 
+      Saya berkomitmen untuk terus belajar dan mengasah keterampilan saya melalui kegiatan PKL serta proyek pribadi.
+    </p>
   </section>
 
   <section id="pendidikan" class="education">
     <h2>Pendidikan</h2>
     <ul>
-      <li><strong>SMK Informatika</strong> (2022 - Sekarang)<br>Jurusan Rekayasa Perangkat Lunak</li>
-      <li><strong>SMPN ISLAM YAPKUM</strong> (2021 - 2024)</li>
-      <li><strong>MI SALAFIYAH SYAFI'IYAH PANGKALAN JATI 2</strong> (2016-2021)</li>
+      <li><strong>SMK Informatika Utama</strong> (2022 - Sekarang)<br />Jurusan Rekayasa Perangkat Lunak</li>
+      <li><strong>SMP Islam Yapkum</strong> (2019 - 2022)</li>
+      <li><strong>MI Salafiyah Syafi'iyah Pangkalan Jati 2</strong> (2013 - 2019)</li>
     </ul>
   </section>
 
-  <section id="pengalaman" class="pengalaman">
+  <section id="pengalaman" class="experience">
     <h2>Pengalaman</h2>
     <ul>
-      <li><strong>Mengikuti organisasi osis</strong> (2017- 2018).</li>
+      <li><strong>Anggota OSIS</strong> (2018 - 2019) — Bagian Dokumentasi dan Publikasi.</li>
+      <li><strong>Proyek Kelompok</strong> — Membuat Website Informasi Sekolah menggunakan HTML dan CSS.</li>
+      <li><strong>PKL</strong> — Membantu pembuatan tampilan website perusahaan dengan desain responsif.</li>
     </ul>
   </section>
 
   <section id="portofolio" class="portfolio">
     <h2>Portofolio Proyek</h2>
-    <div class="portfolio-cards" id="portfolio-list">
-      <!-- Data Dummy akan diisi oleh JS -->
-    </div>
+    <div class="portfolio-cards" id="portfolio-list"></div>
   </section>
 
   <footer>
-    <p>© 2025 Syifa Maylani| Portofolio PKL</p>
+    <p>© 2025 Syifa Maylani | Portofolio PKL</p>
   </footer>
 
   <script>
-    // ==== DATA DUMMY PORTOFOLIO ====
-    const portfolioData = [
-      {
-        title: "Point of Sales (POS) System",
-        img: "https://via.placeholder.com/400x200.png?text=POS+System",
-        desc: "Aplikasi Point of Sales berbasis web dengan Laravel dan MySQL. Fitur meliputi manajemen produk, transaksi, dan laporan penjualan.",
-        tech: "Laravel, MySQL, Bootstrap"
-      },
-      {
-        title: "Website Profil Sekolah",
-        img: "https://via.placeholder.com/400x200.png?text=Website+Sekolah",
-        desc: "Website profil sekolah menampilkan informasi jurusan, guru, dan kegiatan sekolah. Dibuat menggunakan HTML, CSS, dan JavaScript.",
-        tech: "HTML, CSS, JavaScript"
-      }
-    ];
-
-    const portfolioList = document.getElementById("portfolio-list");
-
-    portfolioData.forEach(item => {
-      const card = document.createElement("div");
-      card.classList.add("card");
-      card.innerHTML = `
-        <img src="${item.img}" alt="${item.title}">
-        <div class="card-content">
-          <h3>${item.title}</h3>
-          <p>${item.desc}</p>
-          <p><strong>Teknologi:</strong> ${item.tech}</p>
-        </div>
-      `;
-      portfolioList.appendChild(card);
-    });
-  </script>
-
-</body>
-</html>
-
+    // =

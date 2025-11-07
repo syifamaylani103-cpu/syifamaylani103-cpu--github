@@ -33,7 +33,7 @@
     }
 
     header p {
-      font-size: 1rem; 
+      font-size: 1rem;
       opacity: 0.9;
     }
 
@@ -227,4 +227,39 @@
   <footer>
     <p>© 2025 Syifa Maylani | Portofolio PKL</p>
   </footer>
+
   <script>
+    // ==== DATA DUMMY PORTOFOLIO ====
+    const portfolioData = [
+      {
+        title: "Sistem Informasi Sekolah",
+        img: "https://via.placeholder.com/400x200.png?text=Sistem+Informasi+Sekolah",
+        desc: "Website sekolah untuk menampilkan informasi jurusan, guru, dan kegiatan sekolah.",
+        tech: "HTML, CSS, JavaScript"
+      },
+      {
+        title: "Aplikasi Kasir (POS)",
+        img: "https://via.placeholder.com/400x200.png?text=Aplikasi+Kasir",
+        desc: "Aplikasi point of sales berbasis web untuk mengelola data produk dan transaksi.",
+        tech: "Laravel, Bootstrap, MySQL"
+      }
+    ];
+
+    const portfolioList = document.getElementById("portfolio-list");
+
+    portfolioData.forEach(item => {
+      const card = document.createElement("div");
+      card.classList.add("card");
+      card.innerHTML = `
+        <img src="${item.img}" alt="${item.title}">
+        <div class="card-content">
+          <h3>${item.title}</h3>
+          <p>${item.desc}</p>
+          <p><strong>Teknologi:</strong> ${item.tech}</p>
+        </div>
+      `;
+      portfolioList.appendChild(card);
+    });
+  </script>
+</body>
+</html>
